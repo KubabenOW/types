@@ -555,12 +555,15 @@ declare namespace overwolf.media.videos {
    *     { "startTime": 14000, "endTime": 18000 }
    *   ]
    * }
+   * @param lossless - optional parameter which defaults to true.
+   *  when false is passed it will force the video to be transcoded
    * @param callback A callback function which will be called with the status of
    * the request and the url to the target video.
    */
   function createVideoComposition(
     sourceVideoUrl: string,
     segments: { segments: VideoCompositionSegment[] },
+    lossless?: boolean,
     callback: CallbackFunction<FileResult>
   ): void;
 
